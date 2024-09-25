@@ -1,9 +1,8 @@
 % Preform a Depth First Search through all the possible combinations
 % of numbers, Rolls_Mat, where each row is the set of inputs in a diffrent
 % order and the matrix contains all possible permutations.
-% In order to find a way to get to one of three constant prime numbers, we
-% continually chech if each permutation can reach one of those constants,
-% returning if we reach one or we have checked every permutation.
+% In order to find a way to get to one of three constant prime numbers,
+% Targets
 % This function is only expected to be called during the use of
 % Sacred_Geometry.m and as such may not work if used in other conditions
 % @author Andrew Dantone
