@@ -1,6 +1,8 @@
 % This function takes in an array of numbers and returns a matrix where
 % each row is a diffrent permutation of the order of those numbers
 % @author Andrew Dantone
+
+% Wrapper function for easier use
 function Rolls_Mat = Create_Permutations(Rolls_List)
     Rolls_Mat = Recursive_Permutations(Rolls_List, []); 
 end
@@ -12,16 +14,15 @@ end
 % from the input list, then concatenating all of the results into one
 % matrix and returning that
 function Rolls_Mat = Recursive_Permutations(Rolls_List, Current_List)
-    % initialize with a zero, this should never return since the main
+    % Initialize with a zero, this should never return since the main
     % Sacred_Geometry function makes sure the starting rolls_list is not
     % empty
     Rolls_Mat = 0;
     
     % base case
-    if isscalar(Rolls_List) %checks if there is only one number left
-        Rolls_Mat = cat(2, Current_List, Rolls_List); % add our final 
-                                                      % number and return
-    else %we arent at base case do the recursion
+    if isscalar(Rolls_List) %checks if there is only one number left,
+        Rolls_Mat = cat(2, Current_List, Rolls_List); % adds our final 
+    else %we arent at base case do the recursion      % number and returns
         for roll = 1 : length(Rolls_List)
             % add the roll to a temporary current list
             New_Current_List = cat(2, Current_List, Rolls_List(roll));

@@ -1,6 +1,10 @@
 % This function takes a list of numbers and performs all possible
 % permutations of addition, subtraction, multiplication, and division in an
-% attempt to get to one of the Target numbers
+% attempt to get to one of the Target numbers.
+% This is a helper function for Depth_First_Search.m and is expected to be
+% called with a validated rolls and target list and a string initial value
+% for total, which will be changed into a number value when needed since
+% matlab has mutable varable types.
 % @author Andrew Dantone
 function Is_Path = Has_Path(Rolls_List, Targets, Total)
     %Base Case
@@ -40,12 +44,12 @@ function Is_Path = Has_Path(Rolls_List, Targets, Total)
     %
     % Recurse by popping the first roll in the list then adding, 
     % subtracting, multiplying, and dividing that number with the total
-    % this continues untill we have used all the numbers in the list since
+    % this continues until we have used all the numbers in the list since
     % we MUST use all of the rolled numbers, then if any match our targets
     % return true
     %
     else 
-        %If its the first call we need to pop to since we initialize total
+        %If its the first call we need to pop one extra since we initialize total
         %as the first number rolled
         Pop_Ammount = 2;
         if isa(Total, "string")

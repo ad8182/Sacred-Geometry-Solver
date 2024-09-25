@@ -53,7 +53,7 @@ function Sacred_Geometry()
         elseif(    Rolls_Input == "1" || Rolls_Input == "2" ...
                 || Rolls_Input == "3" || Rolls_Input == "4" ...
                 || Rolls_Input == "5" || Rolls_Input == "6")
-            % TODO: time test this
+            % TODO: time test if this is better
             % % % % Dynamically make a new space if we are out of room
             % % % if(Current_Roll > length(Rolls_List))
             % % %     new_array = zeros(1, length(Rolls_List)+1);
@@ -66,8 +66,7 @@ function Sacred_Geometry()
             % % % Rolls_List(Current_Roll) = str2num(Rolls_Input); %#ok<ST2NM>
             Rolls_List = cat(2, Rolls_List, str2num(Rolls_Input)); %#ok<ST2NM>
             Current_Roll = Current_Roll + 1;
-        % incorrect input, ignore it
-        else
+        else % incorrect input, ignore it
             fprintf("Please only input a number that could" + ...
                 " result from a d6.\n" + ...
                 "Or press enter with no input to finish.\n");
@@ -80,10 +79,11 @@ function Sacred_Geometry()
     % print out the list of inputted rolls for the user
     fprintf("List of rolls:")
     for roll = 1 : length(Rolls_List)
-        if(roll ~= 1)
-            fprintf(",");
+        if(roll == 1)
+            fprintf(" %d", Rolls_List(roll));
+        else
+            fprintf(", %d", Rolls_List(roll));
         end
-        fprintf(" %d", Rolls_List(roll));
     end
     fprintf("\n");
 
@@ -105,7 +105,7 @@ function Sacred_Geometry()
         Target_Constants(1),Target_Constants(2),Target_Constants(3));
     else
         % if successful then the Depth_First_Search function will print 
-        % our path for us
+        % our path for us [Not implemented yet]
         fprintf( "Sacred Geometry succeeds here.\n");
     end
 end
