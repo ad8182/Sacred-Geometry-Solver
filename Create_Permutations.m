@@ -1,6 +1,6 @@
 % This function takes in an array of numbers and returns a matrix where
 % each row is a diffrent permutation of the order of those numbers
-% @author Andrew Dantone 
+% @author Andrew Dantone  
 
 % Wrapper function for easier use
 function Rolls_Mat = Create_Permutations(Rolls_List)
