@@ -1,5 +1,5 @@
 # Sacred-Geometry-Solver
-A solver for the Pathfinder 1st edition feat: Sacred Geometry, written by Andrew Dantone
+A solver for the Pathfinder 1st edition feat: Sacred Geometry
 
 See the details of the feat here: https://www.d20pfsrd.com/feats/general-feats/sacred-geometry/
 
@@ -26,3 +26,5 @@ Run Sacred_Geometry.m with no input arguments
 The program will prompt the user for several inputs for the target spell level and dice rolls.
 * If the user does somthing unexpected the program will send the user a custom error message explaining what went wrong.
 * Otherwise once the user input is done the program will print whether Sacred Geometry was successful or not.
+
+Author: Andrew Dantone
