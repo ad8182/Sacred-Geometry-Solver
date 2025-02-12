@@ -7,7 +7,7 @@ See the details of the feat here: https://www.d20pfsrd.com/feats/general-feats/s
 * Prompts the user for a target spell level to determine prime constant targets.
 * Repeatedly prompts user for dice rolls until the user inputs an empty roll, at which point the program assumes the user is done inputting rolls (We dont know what level their character is and thus cannot determine how many rolls they need to input unless we seperately ask them).
 * Takes the set of inputed dice rolls and re-orders them in every possible permutation.
-* Runs a Depth First search to find the prime constants. (We need to search every possible space to trly determine that we cannot reach a prime constant, and since the feat dictates that all numbers must be used the solution will always be at the lowest depth, thus BFS has a better best time complexity and an equal worst time complexity than DFS in this problem.
+* Runs a Depth First search to find the prime constants. (We need to search every possible space to truly determine that we cannot reach a prime constant, and since the feat dictates that all numbers must be used the solution will always be at the lowest depth, thus BFS has a better best time complexity and an equal worst time complexity than DFS in this problem.
 * Returns if it was possible to reach one of the targeted constants.
 
 ## Planned Implementations:
